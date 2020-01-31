@@ -1,0 +1,64 @@
+{
+  "name": "rcphub-web-backend",
+  "version": "0.1.0",
+  "description": "Back-End of RcpHub",
+  "author": "Aaron Delasy <aaron@delasy.com>",
+  "homepage": "https://api.rcphub.com",
+  "private": true,
+  "dependencies": {
+    "@sentry/node": "^5.12.3",
+    "apollo-server-express": "^2.10.0",
+    "bcrypt": "^3.0.8",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "graphql": "^14.6.0",
+    "helmet": "^3.21.2",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.15",
+    "pg": "^7.18.1",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^5.21.4",
+    "uuid": "^3.4.0"
+  },
+  "devDependencies": {
+    "apollo-server-testing": "^2.10.0",
+    "factory-girl": "^5.0.4",
+    "faker": "^4.1.0",
+    "husky": "^4.2.3",
+    "jest": "^25.1.0",
+    "sequelize-cli": "^5.5.1",
+    "standard": "^14.3.1",
+    "supertest": "^4.0.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test"
+    }
+  },
+  "jest": {
+    "collectCoverage": true,
+    "coveragePathIgnorePatterns": [
+      "<rootDir>/node_modules/",
+      "<rootDir>/tests/"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    },
+    "testEnvironment": "node",
+    "testMatch": [
+      "<rootDir>/tests/**/*.test.js"
+    ],
+    "verbose": true
+  },
+  "scripts": {
+    "dev": "scripts/dev.sh",
+    "start": "scripts/start.sh",
+    "test": "scripts/test.sh"
+  }
+}

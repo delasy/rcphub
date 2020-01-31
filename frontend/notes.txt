@@ -1,0 +1,13 @@
+https://blog.apollographql.com/modularizing-your-graphql-schema-code-d7f71d5ed5f2
+https://blog.apollographql.com/graphql-schema-delegation-9d832648c543
+https://github.com/apollographql/graphql-tools/issues/750
+https://github.com/chrisbolin/understanding-relay-mutations
+https://stackoverflow.com/questions/57040429/how-to-split-a-long-graphql-schema/57040705
+
+Lint SCSS
+Stylelint with scss plugin or https://github.com/postcss/postcss-parser-tests
+
+Lint GraphQL
+https://github.com/apollographql/eslint-plugin-graphql
+
+Create test page of Recipe Add

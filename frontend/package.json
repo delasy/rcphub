@@ -1,0 +1,96 @@
+{
+  "name": "rcphub-web-frontend",
+  "version": "0.1.0",
+  "description": "Front-End of RcpHub",
+  "author": "Aaron Delasy <aaron@delasy.com>",
+  "homepage": "https://www.rcphub.com",
+  "private": true,
+  "babel": {
+    "presets": [
+      "next/babel"
+    ]
+  },
+  "dependencies": {
+    "@apollo/client": "^3.0.0-beta.34",
+    "@sentry/browser": "^5.12.1",
+    "@sentry/node": "^5.12.3",
+    "@zeit/next-sass": "^1.0.1",
+    "@zeit/next-source-maps": "0.0.4-canary.1",
+    "bootstrap": "^4.4.1",
+    "classnames": "^2.2.6",
+    "dotenv": "^8.2.0",
+    "graphql": "^14.6.0",
+    "isomorphic-unfetch": "^3.0.0",
+    "lodash": "^4.17.15",
+    "next": "^9.2.1",
+    "node-sass": "^4.13.1",
+    "nookies": "^2.0.8",
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-bootstrap": "^1.0.0-beta.16",
+    "react-dom": "^16.12.0"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.1.1",
+    "@testing-library/react": "^9.4.0",
+    "babel-eslint": "^10.0.3",
+    "babel-jest": "^25.1.0",
+    "faker": "^4.1.0",
+    "husky": "^4.2.3",
+    "jest": "^25.1.0",
+    "jest-transform-css": "^2.0.0",
+    "jest-transform-graphql": "^2.1.0",
+    "standard": "^14.3.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test"
+    }
+  },
+  "jest": {
+    "collectCoverage": true,
+    "coveragePathIgnorePatterns": [
+      "<rootDir>/node_modules/",
+      "<rootDir>/tests/"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    },
+    "moduleFileExtensions": [
+      "graphql",
+      "json",
+      "js",
+      "jsx",
+      "scss"
+    ],
+    "moduleNameMapper": {
+      "^~/(.*)": "<rootDir>/$1"
+    },
+    "setupFilesAfterEnv": [
+      "<rootDir>/tests/setup.jsx"
+    ],
+    "testMatch": [
+      "<rootDir>/tests/**/*.test.jsx"
+    ],
+    "transform": {
+      "\\.graphql$": "jest-transform-graphql",
+      "\\.js?x$": "babel-jest",
+      "\\.scss$": "jest-transform-css"
+    },
+    "verbose": true
+  },
+  "scripts": {
+    "build": "next build",
+    "dev": "next -p 8082",
+    "start": "next start -p $PORT",
+    "test": "scripts/test.sh"
+  },
+  "standard": {
+    "parser": "babel-eslint"
+  }
+}

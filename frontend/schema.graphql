@@ -1,0 +1,30 @@
+# This file was generated based on ".graphqlconfig". Do not edit manually.
+
+schema {
+  query: Query
+  mutation: Mutation
+}
+
+type AuthenticateUserPayload {
+  token: String!
+}
+
+type CurrentUser {
+  email: String!
+  firstName: String!
+  id: ID!
+  lastName: String!
+}
+
+type Mutation {
+  authenticateUser(input: AuthenticateUserInput!): AuthenticateUserPayload!
+}
+
+type Query {
+  currentUser: CurrentUser!
+}
+
+input AuthenticateUserInput {
+  email: String!
+  password: String!
+}

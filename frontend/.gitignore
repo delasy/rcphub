@@ -1,0 +1,11 @@
+# Next.js build output
+/.next/
+
+# Coverage directory
+/coverage/
+
+# Node.js dependencies directory
+/node_modules/
+
+# DotEnv environment variables
+/.env
